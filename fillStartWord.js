@@ -1,9 +1,12 @@
 const { template } = require('@babel/core')
 
 function fillStartWord(startWord, word) {
-  if(String(startWord).match(word)) {
+  if(word.includes(startWord)) {
     console.log(word)
+  } else {
+      console.log(String.prototype.concat(startWord,word))
   }
-  console.log(startWord + word)
 }
 module.exports = fillStartWord
+
+console.log(fillStartWord('first','Time'))
